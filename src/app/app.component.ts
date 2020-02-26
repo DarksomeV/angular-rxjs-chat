@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import {UsersService} from './user/user.service';
+import {ChatExampleData} from './data/chat-example-data';
+import {ThreadsService} from './thread/threads.service';
+import {MessagesService} from './message/messages.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rxjs-chat';
+  constructor(public messagesService: MessagesService,
+              public threadsService: ThreadsService,
+              public usersService: UsersService) {
+    ChatExampleData.init(messagesService, threadsService, usersService);
+  }
 }
