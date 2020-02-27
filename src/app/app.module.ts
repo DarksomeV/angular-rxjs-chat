@@ -13,6 +13,7 @@ import { ThreadsService } from './thread/threads.service';
 import { ChatThreadComponent } from './chat-thread/chat-thread.component';
 import {FormsModule} from '@angular/forms';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
+import {FromNowPipe} from './pipes/from-now.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ChatMessageComponent } from './chat-message/chat-message.component';
     ChatWindowComponent,
     ChatPageComponent,
     ChatThreadComponent,
-    ChatMessageComponent
+    ChatMessageComponent,
+    FromNowPipe
   ],
   imports: [
     BrowserModule,
